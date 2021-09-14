@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker run -i -t --user=gmacdougall -v $(readlink -f $SSH_AUTH_SOCK):/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent gmdc /usr/bin/fish

@@ -25,6 +25,7 @@ RUN pacman -S -y --noconfirm --needed \
   net-tools \
   openbsd-netcat \
   openssh \
+  postgresql-libs \
   ripgrep \
   shared-mime-info \
   starship \

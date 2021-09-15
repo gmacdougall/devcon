@@ -57,6 +57,7 @@ RUN yay -S --noprovides --noconfirm --answerclean=N --answerdiff=N \
 
 ARG RUBY_VERSION="2.7.4"
 RUN ruby-install ruby-$RUBY_VERSION
+RUN rm -rf /home/gmacdougall/src
 RUN fish -c 'fisher update'
 RUN fish -c "chruby ruby; ruby -e 'puts \"ruby-$RUBY_VERSION\"' > /home/gmacdougall/.ruby-version"
 RUN fish -c "chruby ruby; gem install bundler rubocop-daemon solargraph"
